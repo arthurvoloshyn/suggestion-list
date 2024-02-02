@@ -5,7 +5,7 @@ export function Layout({
   actions,
   mainPageInfo,
   mainContent,
-  sidebar
+  sidebar,
 }: {
   actions: ReactNode;
   mainPageInfo: ReactNode;
@@ -21,8 +21,12 @@ export function Layout({
         <Grid item>{mainPageInfo}</Grid>
       </Grid>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={3}>{sidebar}</Grid>
-        <Grid item xs={12} md={9}>{mainContent}</Grid>
+        <Grid item xs={12} md={3}>
+          {sidebar}
+        </Grid>
+        <Grid item xs={12} md={9}>
+          {mainContent}
+        </Grid>
       </Grid>
     </Container>
   );

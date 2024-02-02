@@ -25,7 +25,7 @@ const filtersContext = createContext<{
 
 export function FiltersDataProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<SuggestionFiltersData>({
-    order: 'createAt-desc',
+    order: "createAt-desc",
     query: "",
     status: undefined,
     tag: undefined,

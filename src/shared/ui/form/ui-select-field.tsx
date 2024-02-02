@@ -3,7 +3,8 @@ import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 export function UiSelectField<
   IdKey extends string,
   LabelKey extends string,
-  Option extends Record<IdKey, number | string | undefined> & Record<LabelKey, string>
+  Option extends Record<IdKey, number | string | undefined> &
+    Record<LabelKey, string>,
 >({
   idKey,
   label,
