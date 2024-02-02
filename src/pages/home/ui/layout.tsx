@@ -1,4 +1,4 @@
-import { Container, Grid, Box, Button, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import { ReactNode } from "react";
 
 export function Layout({
@@ -27,11 +27,3 @@ export function Layout({
     </Container>
   );
 }
-
-<Box sx={{ display: "flex", alignItems: "center" }}>
-  <Button variant="contained">Добавить</Button>
-</Box>;
-
-<Typography variant="h4" gutterBottom>
-  Список предложений
-</Typography>;
