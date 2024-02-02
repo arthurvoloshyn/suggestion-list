@@ -1,6 +1,13 @@
 import { SuggestionEntity } from "./entities";
 import { useFilters } from "./filters.model";
 
+function containsIgnoreCase(main: string, sub: string) {
+  const mainLower = main.toLowerCase();
+  const subLower = sub.toLowerCase();
+
+  return mainLower.includes(subLower);
+}
+
 export function useSuggestionsList() {
   const data: SuggestionEntity[] = [
     {
@@ -29,6 +36,23 @@ export function useSuggestionsList() {
 
   preparedData = preparedData.filter((item) => {
     if (filtersData.status && filtersData.status !== item.status.id) {
+      return false;
+    }
+
+    if (
+      filtersData.tag &&
+      !item.tags.some((tag) => tag.id === filtersData.tag)
+    ) {
+      return false;
+    }
+
+    const containsTitle = containsIgnoreCase(item.title, filtersData.query);
+    const containsDescription = containsIgnoreCase(
+      item.description,
+      filtersData.query,
+    );
+
+    if (filtersData.query && !(containsTitle || containsDescription)) {
       return false;
     }
 
