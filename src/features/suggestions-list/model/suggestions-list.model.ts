@@ -9,8 +9,8 @@ export function useSuggestionsList() {
       description: "Description",
       title: "title 1",
       grade: 4,
-      status: { id: 1, label: "Открыто" },
-      tags: [{ id: 1, label: "Тег1" }],
+      status: { id: 1, label: "Opened" },
+      tags: [{ id: 1, label: "Tag 1" }],
     },
     {
       id: 2,
@@ -18,8 +18,8 @@ export function useSuggestionsList() {
       description: "Description",
       title: "title 2",
       grade: 6,
-      status: { id: 2, label: "Закрыто" },
-      tags: [{ id: 2, label: "Тег2" }],
+      status: { id: 2, label: "Closed" },
+      tags: [{ id: 2, label: "Tag 2" }],
     },
   ];
 
