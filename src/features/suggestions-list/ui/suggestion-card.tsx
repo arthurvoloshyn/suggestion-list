@@ -30,8 +30,8 @@ export function SuggestionCard({
       <CardContent>
         <Typography variant="h6">{title}</Typography>
         <Typography>{description}</Typography>
-        <Typography>Теги: {tags.map((v) => v.label).join(", ")}</Typography>
-        <Typography>Статус: {status.label}</Typography>
+        <Typography>Tags: {tags.map((v) => v.label).join(", ")}</Typography>
+        <Typography>Status: {status.label}</Typography>
       </CardContent>
     </Card>
   );
