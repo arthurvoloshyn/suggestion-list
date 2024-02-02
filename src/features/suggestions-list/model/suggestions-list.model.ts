@@ -59,5 +59,11 @@ export function useSuggestionsList() {
     return true;
   });
 
+  preparedData.sort((item1, item2) => {
+    return filtersData.order === "createAt-desc"
+      ? item2.createdAt.getTime() - item1.createdAt.getTime()
+      : item2.grade - item1.grade;
+  });
+
   return preparedData;
 }
