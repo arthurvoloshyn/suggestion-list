@@ -11,12 +11,12 @@ export function SuggestionsFilters() {
   return (
     <FiltersLayout>
       <UiTextField
-        label="Поиск по названию/описанию"
+        label="Search by name/description"
         onChange={updateQuery}
         value={data.query}
       />
       <UiSelectField
-        label="Фильтр по тегам"
+        label="Filter by tags"
         idKey="id"
         labelKey="label"
         options={tagsOptions}
@@ -24,7 +24,7 @@ export function SuggestionsFilters() {
         onChange={updateTag}
       />
       <UiSelectField
-        label="Фильтр по статусу"
+        label="Filter by status"
         idKey="id"
         labelKey="label"
         options={statusOptions}
@@ -32,7 +32,7 @@ export function SuggestionsFilters() {
         onChange={updateStatus}
       />
       <UiSelectField
-        label="Сортировать по"
+        label="Sort by"
         idKey="id"
         labelKey="label"
         options={sortOptions}
